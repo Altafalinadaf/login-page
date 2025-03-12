@@ -1,0 +1,27 @@
+<!-- dashboard.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <script defer src="{{url_for('static',filename='script.js')}}"></script>
+</head>
+<body>
+    <h2>Expense Dashboard</h2>
+    <form id="expense-form">
+        <input type="number" id="amount" placeholder="Amount" required>
+        <input type="text" id="category" placeholder="Category" required>
+        <input type="text" id="description" placeholder="Description">
+        <button type="submit">Add Expense</button>
+    </form>
+    <ul id="expense-list">
+        {% for expense in expenses %}
+            <li>
+                {{ expense.amount }} - {{ expense.category }} - {{ expense.description }}
+                <button class="delete" data-id="{{ expense.id }}">Delete</button>
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/logout">Logout</a>
+</body>
+</html>
