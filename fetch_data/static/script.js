@@ -5,7 +5,7 @@ document.getElementById('fetch-button').addEventListener('click', () => {
         .then(response => response.text()) // Get the plain text response
         .then(data => {
             // Display the message on the webpage
-            document.getElementById('message').innerText = data;
+            document.getElementById('message').innerText = "done";
         })
         .catch(error => {
             console.error('Error fetching data:', error);
