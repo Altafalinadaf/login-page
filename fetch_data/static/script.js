@@ -6,6 +6,9 @@ document.getElementById('fetch-button').addEventListener('click', () => {
         .then(data => {
             // Display the message on the webpage
             document.getElementById('message').innerText = "done";
+            let bg_color= document.getElementById('bg-color');
+            bg_color.style.bgcolor='red';
+
         })
         .catch(error => {
             console.error('Error fetching data:', error);
