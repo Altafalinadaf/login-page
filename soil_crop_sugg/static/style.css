@@ -42,7 +42,8 @@ label {
     color: #2c3e50;
 }
 
-input, select {
+input,
+select {
     width: 100%;
     padding: 12px;
     border: 1px solid #ddd;
@@ -81,7 +82,7 @@ button:hover {
     border-radius: 8px;
     padding: 20px;
     margin-bottom: 20px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .crop-card h3 {
@@ -114,7 +115,7 @@ button:hover {
     transform: translateY(-50%);
     color: white;
     font-weight: bold;
-    text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .crop-details {
@@ -178,16 +179,18 @@ footer {
     .container {
         padding: 10px;
     }
-    
+
     .detail-row {
         flex-direction: column;
     }
-    
-    .detail-label, .detail-value, .detail-status {
+
+    .detail-label,
+    .detail-value,
+    .detail-status {
         width: 100%;
         text-align: left;
     }
-    
+
     .detail-status {
         margin-top: 5px;
     }

@@ -171,11 +171,9 @@ def get_crop_recommendations():
             'phosphorus_status': get_nutrient_status(phosphorus, soil_props[4], soil_props[5], crop[4]),
             'potassium_status': get_nutrient_status(potassium, soil_props[6], soil_props[7], crop[5])
         })
-    
     # Sort by score
     recommendations.sort(key=lambda x: x['score'], reverse=True)
     conn.close()
-    
     return jsonify(recommendations[:5])
 
 def get_nutrient_status(value, soil_min, soil_max, crop_need):
